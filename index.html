@@ -1,48 +1,50 @@
 <!DOCTYPE html>
 
-<!--
-
-  Code by Louis Gasnault, 2017
-      sejikage.github.io
-
--->
-
 <html>
 
   <head>
+
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Louis Gasnault ~ Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
     <link rel="stylesheet" type="text/css" href="styles/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Comfortaa|Roboto+Mono">
-    <link rel="stylesheet" type="text/css" href="styles/style.css">
-    <link rel="icon" type="image/x-icon" href="images/icon.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Mono">
+
   </head>
 
   <body>
 
-    <nav class="fixed">
-      <a href="#works">WORKS</a>
-      <a href="#about">ABOUT</a>
-      <a href="#team">TEAM</a>
-      <a href="#contact">CONTACT</a>
-    </nav>
-
     <header>
+      
+      <div id="top">
+        <img src="images/icon.ico">
+        <h1>Louis Gasnault</h1>
+        <h3>CodeMaker</h3>
+      </div>
 
-      <div id="avatar">
-        
-        <img src="images/louisgasnault.png">
-        <div id="name">Louis Gasnault</div>
+      <div id="middle">
+        <a href="https://github.com/SejiKage/Bomberman">Bomberman<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+        <a href="https://sejikage.github.io/">Portfolio<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+      </div>
 
+      <div id="bottom">
+        <a href="https://github.com/SejiKage" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+        <a href="https://sejikage.tumblr.com/" target="_blank"><i class="fa fa-tumblr" aria-hidden="true"></i></a>
+        <a href="mailto:job.louisgasnault@gmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
       </div>
 
     </header>
 
-    <div class="previous buttons" onclick="scrollBy(-1)"><i class="fa fa-chevron-up" aria-hidden="true"></i><i class="blink-caret">│</i></div>
-    <div class="next buttons" onclick="scrollBy(1)"><i class="fa fa-chevron-down" aria-hidden="true"></i><i class="blink-caret">│</i></div>
+    <nav>
+      <a href="#works">Works</a>
+      <a href="#about">About</a>
+      <a href="#team">Team</a>
+      <a href="#contact">Contact</a>
+      <span id="bars-button"><i class="fa fa-bars" aria-hidden="true"></i></span>
+    </nav>
 
-    <script type="text/javascript" src="scripts/main.js"></script>
+    <section></section>
 
   </body>
 
