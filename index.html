@@ -29,6 +29,8 @@
         <a href="#game">Game Developer<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
         <a href="#web">Web Developer<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
         <a href="#3D">3D Beginner<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+        <a href="#about">About<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+        <a href="#team">Team<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
       </nav>
 
       <div id="bottom">
@@ -46,20 +48,34 @@
 
     <section>
       <!-- Page content -->
-
+      
       <article id="game">
         
         <div class="main">
           <h3>Game Developer</h3>
           <div class="container">
-            <span class="content games" style="background-image: url('images/htt.jpg');">Hack The Tower</span>
-            <span class="content games" style="background-image: url('images/bomberman.jpg');">Bomberman</span>
-            <span class="content games">--???--</span>
-          </div>
-        </div>
 
-        <div class="modal">
-          <!-- Extra content, hidden, there can have many -->
+            <span class="content games">
+
+              <img src="images/games/htt.jpg" alt="Hack The Tower">
+              <a class="title" href="https://github.com/IndevStudioGameDev/Hack-The-Tower-Mobile" target="_blank">Hack The Tower</a>
+
+            </span>
+
+            <span class="content games">
+
+              <img src="images/games/bomberman.jpg" alt="Bomberman">
+              <a class="title" href="https://github.com/SejiKage/Bomberman" target="_blank">Bomberman</a>
+
+            </span>
+
+            <span class="content games">
+
+              <div class="title">-- ?? --</div>
+
+            </span>
+
+          </div>
         </div>
 
       </article>
@@ -71,12 +87,13 @@
         <div class="main">
           <h3>Web developer</h3>
           <div class="container">
-            <span class="content webs">Portfolio</span>
-          </div>
-        </div>
 
-        <div class="modal">
-          <!-- Extra content, hidden, there can have many -->
+            <span class="content webs">
+              <img src="images/web/dusserre.png">
+              <a class="title" href="http://tanguy-dusserre.000webhostapp.com/" target="_blank">Tanguy Dusserre</a>
+            </span>
+
+          </div>
         </div>
 
       </article>
@@ -88,18 +105,58 @@
         <div class="main">
           <h3>3D Beginner</h3>
           <div class="container">
-            <span class="content 3Ds" style="background-image: url('images/paysage.jpg');"></span>
-          </div>
-        </div>
 
-        <div class="modal">
-          <!-- Extra content, hidden, there can have many -->
+            <span class="content 3Ds">
+
+              <img src="images/3Ds/paysage.jpg" alt="Low-Poly Paysage, Louis (SejiKage) Gasnault">
+              <a class="title">Paysage</a>
+
+            </span>
+
+          </div>
         </div>
 
       </article>
 
+      <hr>
+
+      <footer>
+        
+        <div id="about">
+          <h3>About</h3>
+          <div class="text">
+            <p>Heyo !</p>
+            <p>My name is Louis Gasnault, aka SejiKage. I'm a young french guy of 17 who've start to learn programming from scratch since 5 years now.</p>
+            <p>I actually work on some little games, and also websites. As you can see, I've just start to learn 3D (with Blender).</p>
+          </div>
+        </div>
+
+        <div id="team">
+          <h3>Team</h3>
+          <div class="text">
+            <p>With my friend <a href="https://jdrprod.github.io/" target="_blank">Arthur Correnson</a>, we've founded Floating Dream Studio, an indie video-game studio.</p>
+            <p>Since January 2017, a lot of people joined us: artists, musicians, ... Check out <a href="https://floating-dream-studio.github.io/" target="_blank">our website!</a></p>
+            <p>One watchwords: enjoy on learning! We hope that our future games will please you ;)</p>
+          </div>
+        </div>
+
+      </footer>
+
+      <hr>
+
     </section>
 
+    <div id="modal">
+      
+      <span id="close"><i class="fa fa-times fa-2x" aria-hidden="true"></i></span>
+
+      <img id="modal-img">
+
+      <div id="caption"></div>
+
+    </div>
+
+    <script type="text/javascript" src="scripts/main.js"></script>
   </body>
 
 </html>

@@ -1,17 +1,22 @@
 // ~ Hello World ~
-console.log('%c<Hello World />', 'color: #DD375E');
+console.log('%c<Hello World />', 'color: #37A4DD');
 
-// Get elements
+var modal = document.getElementById('modal'); // Get my modal
+var close = document.getElementById('close'); // The close button
+var modalImg = document.getElementById('modal-img'); // The img container
+var caption = document.getElementById('caption'); // The caption container
 
-var buttons = document.getElementsByClassName("buttons");
+var images = document.getElementsByClassName('3Ds');
 
-var section = document.getElementsByTagName("section")[0];
-document.addEventListener('scroll', function(e) {
+for ( var i = 0; i < images.length; i ++ ) {
 
-  if ( window.scrollY >= section.offsetTop ) {
-    for (var i = 0; i < buttons.length; i ++) { buttons[i].style.visibility = "visible" }
-  } else {
-    for (var i = 0; i < buttons.length; i ++) { buttons[i].style.visibility = "hidden" }
+  images[i].onclick = function() {
+    let img = this.getElementsByTagName('img')[0];
+    modal.style.display = "flex";
+    modalImg.src = img.src;
+    caption.innerHTML = img.alt;
   }
 
-});
+}
+
+close.onclick = function() { modal.style.display = "none"; }

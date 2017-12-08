@@ -4,6 +4,17 @@
   src: url('../fonts/neuropol.ttf');
 }
 
+/* Animation */
+@keyframes zoom {
+  from { transform: scale(0); }
+  to { transform: scale(1); }
+}
+
+@-webkit-keyframes zoom {
+  from { -webkit-transform: scale(0); }
+  to { -webkit-transform: scale(1); }
+}
+
 /* General */
 * { margin: 0; padding: 0; }
 
@@ -25,17 +36,15 @@ header {
   display: flex;
   flex-direction: column; justify-content: space-between; align-items: center;
   border-right: 1px solid #09713A;
-  /*background-color: #171717;*/
-  z-index: 100;
+  z-index: 1;
 }
 
 #hide {
   position: fixed;
-  top: 0; left: 17%;
-  width: 6%;
+  top: 0; left: 19.5%;
+  width: 1%;
   height: 100%;
-  display: flex;
-  flex-direction: column; justify-content: center; align-items: center;
+  display: none;
 }
 
 #hide i {
@@ -76,14 +85,16 @@ nav {
 nav a {
   position: relative;
   left: 0;
-  width: 80%; height: 3em;
+  width: auto;
+  height: 3em;
   margin-bottom: 10%;
   padding-left: 5px;
   display: flex;
-  flex-direction: row; align-items: center;
+  flex-direction: row; align-items: center; justify-content: space-between;
   font-family: neuro;
   text-transform: uppercase;
   color: #14FF82;
+  border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
   cursor: pointer;
   transition: all 0.2s ease-out;
@@ -94,14 +105,11 @@ nav a i {
   transition: all 0.2s ease-out;
 }
 
-nav a:hover {
-  width: 90%;
-  border-bottom-color: #14FF82;
-}
+nav a:hover { border-color: #14FF82; }
 
 nav a:hover i {
   display: inline;
-  margin-left: 15px;
+  margin-right: 15px;
   color: #14FF82;
 }
 
@@ -141,7 +149,6 @@ section hr {
 /* Articles (container) */
 
 article {
-  /*height: 100%;*/
   display: flex;
   flex-direction: row;
   margin-bottom: 5%;
@@ -157,14 +164,8 @@ article h3 {
   text-align: center;
 }
 
-.main, .modal {
-  width: 100%; height: 100%;
-}
-
-.modal {
-  position: relative;
-  top: 0; left: 0;
-  width: 0;
+.main {
+  width: 100%;
 }
 
 /* Articles (content) */
@@ -175,8 +176,13 @@ article h3 {
   flex-wrap: wrap;
 }
 
+.content:nth-child(2n) {
+  margin: 0 5px 0 5px;
+}
+
 .content {
-  width: 33%; height: 150px;
+  position: relative;
+  width: 30%;
   display: flex;
   flex-direction: column; justify-content: center; align-items: center;
   font-size: 150%;
@@ -191,5 +197,97 @@ article h3 {
 }
 
 .content:hover {
-  box-shadow: inset 0 0 20px #ddd;
+  border: 1px solid #09713A;
+}
+
+.content img {
+  width: 100%;
+}
+
+.title {
+  position: absolute;
+  bottom: 0;
+  width: 100%; height: 100%;
+  display: flex;
+  flex-direction: column; justify-content: center; align-items: center;
+  color: #ddd;
+  background-color: rgba(23, 23, 23, .5);
+  transition: all 0.1s ease-out;
+}
+
+.content:hover .title {
+  color: transparent;
+  background-color: transparent;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  flex-direction: row; justify-content: space-between;
+}
+
+footer div { width: 50%; padding-bottom: 5%; }
+
+footer h3 {
+  padding: 5% 0;
+  font-family: neuro;
+  font-size: 2em;
+  font-weight: normal;
+  color: #ddd;
+  text-align: center;
+}
+
+.text {
+  width: 80%;
+  margin: auto;
+  color: #ddd;
+  text-align: justify;
+}
+
+.text p { margin-bottom: 5%; }
+
+.text a { color: #14FF82; text-decoration: underline; }
+
+#about {
+  border-right: 1px solid #14ff82;
+}
+
+/* Modal */
+#modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  display: none;
+  flex-direction: column; justify-content: space-between; align-items: center;
+  background-color: rgba(23, 23, 23, 1);
+  z-index: 2;
+}
+
+#close {
+  position: absolute;
+  top: 0; right: 0;
+  margin: 25px;
+  color: #ddd;
+  cursor: pointer;
+  transition: color 0.3s ease-out;
+}
+
+#close:hover { color: #14ff82; }
+
+#modal-img {
+  margin: auto;
+  width: 90%;
+  border: 1px solid #ddd;
+}
+
+#caption {
+  margin: auto;
+  font-size: 150%;
+  text-align: center;
+  color: #ddd;
+}
+
+#modal {
+  animation-name: zoom;
+  animation-duration: 0.6s;
 }
