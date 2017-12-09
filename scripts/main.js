@@ -20,3 +20,16 @@ for ( var i = 0; i < images.length; i ++ ) {
 }
 
 close.onclick = function() { modal.style.display = "none"; }
+
+var nav = document.getElementsByTagName('nav')[0];
+var header = document.getElementsByTagName('header')[0];
+var section = document.getElementsByTagName('section')[0];
+var bars = document.getElementById('bars'); // Hamburger
+function hide(){ header.style.width = "0"; }
+
+bars.onclick = function() {
+  header.style.width = "75%";
+}
+
+section.onclick = hide;
+nav.onclick = hide;
